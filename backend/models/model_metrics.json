@@ -1,0 +1,255 @@
+{
+  "dataset_total_samples": 850,
+  "train_samples": 680,
+  "test_samples": 170,
+  "feature_columns": [
+    "attendance",
+    "study_hours",
+    "assignment_score",
+    "internal_score",
+    "previous_gpa",
+    "previous_marks",
+    "participation",
+    "backlogs"
+  ],
+  "feature_labels": {
+    "attendance": "Class Attendance (%)",
+    "study_hours": "Weekly Study Hours",
+    "assignment_score": "Assignment Average (%)",
+    "internal_score": "Internal Exam Average (%)",
+    "previous_gpa": "Previous Semester GPA",
+    "previous_marks": "Previous Semester Marks (%)",
+    "participation": "Classroom Participation (%)",
+    "backlogs": "Active Backlog Count"
+  },
+  "selected_regressor": "Linear Regression",
+  "selected_classifier": "Logistic Regression",
+  "regression_comparison": {
+    "Linear Regression": {
+      "mae": 2.678,
+      "rmse": 3.321,
+      "r2": 0.9653
+    },
+    "Random Forest Regressor": {
+      "mae": 2.777,
+      "rmse": 3.39,
+      "r2": 0.9638
+    },
+    "Gradient Boosting Regressor": {
+      "mae": 2.847,
+      "rmse": 3.552,
+      "r2": 0.9603
+    }
+  },
+  "classification_comparison": {
+    "Logistic Regression": {
+      "accuracy": 0.8471,
+      "precision": 0.851,
+      "recall": 0.8471,
+      "f1_score": 0.8477,
+      "confusion_matrix": [
+        [
+          30,
+          5,
+          0,
+          0
+        ],
+        [
+          1,
+          47,
+          6,
+          0
+        ],
+        [
+          0,
+          4,
+          47,
+          4
+        ],
+        [
+          0,
+          0,
+          6,
+          20
+        ]
+      ],
+      "classes": [
+        "At Risk",
+        "Average",
+        "Good",
+        "Excellent"
+      ]
+    },
+    "Random Forest Classifier": {
+      "accuracy": 0.8353,
+      "precision": 0.8414,
+      "recall": 0.8353,
+      "f1_score": 0.8357,
+      "confusion_matrix": [
+        [
+          28,
+          7,
+          0,
+          0
+        ],
+        [
+          1,
+          48,
+          5,
+          0
+        ],
+        [
+          0,
+          5,
+          46,
+          4
+        ],
+        [
+          0,
+          0,
+          6,
+          20
+        ]
+      ],
+      "classes": [
+        "At Risk",
+        "Average",
+        "Good",
+        "Excellent"
+      ]
+    },
+    "Gradient Boosting Classifier": {
+      "accuracy": 0.8294,
+      "precision": 0.8325,
+      "recall": 0.8294,
+      "f1_score": 0.8294,
+      "confusion_matrix": [
+        [
+          30,
+          5,
+          0,
+          0
+        ],
+        [
+          2,
+          48,
+          4,
+          0
+        ],
+        [
+          0,
+          7,
+          42,
+          6
+        ],
+        [
+          0,
+          0,
+          5,
+          21
+        ]
+      ],
+      "classes": [
+        "At Risk",
+        "Average",
+        "Good",
+        "Excellent"
+      ]
+    }
+  },
+  "best_regression_metrics": {
+    "mae": 2.678,
+    "rmse": 3.321,
+    "r2": 0.9653
+  },
+  "best_classification_metrics": {
+    "accuracy": 0.8471,
+    "precision": 0.851,
+    "recall": 0.8471,
+    "f1_score": 0.8477,
+    "confusion_matrix": [
+      [
+        30,
+        5,
+        0,
+        0
+      ],
+      [
+        1,
+        47,
+        6,
+        0
+      ],
+      [
+        0,
+        4,
+        47,
+        4
+      ],
+      [
+        0,
+        0,
+        6,
+        20
+      ]
+    ],
+    "classes": [
+      "At Risk",
+      "Average",
+      "Good",
+      "Excellent"
+    ]
+  },
+  "feature_importances": [
+    {
+      "feature": "internal_score",
+      "label": "Internal Exam Average (%)",
+      "importance": 0.8769,
+      "importance_pct": 87.69
+    },
+    {
+      "feature": "attendance",
+      "label": "Class Attendance (%)",
+      "importance": 0.0616,
+      "importance_pct": 6.16
+    },
+    {
+      "feature": "assignment_score",
+      "label": "Assignment Average (%)",
+      "importance": 0.0215,
+      "importance_pct": 2.15
+    },
+    {
+      "feature": "backlogs",
+      "label": "Active Backlog Count",
+      "importance": 0.0197,
+      "importance_pct": 1.97
+    },
+    {
+      "feature": "study_hours",
+      "label": "Weekly Study Hours",
+      "importance": 0.0071,
+      "importance_pct": 0.71
+    },
+    {
+      "feature": "participation",
+      "label": "Classroom Participation (%)",
+      "importance": 0.007,
+      "importance_pct": 0.7
+    },
+    {
+      "feature": "previous_marks",
+      "label": "Previous Semester Marks (%)",
+      "importance": 0.0033,
+      "importance_pct": 0.33
+    },
+    {
+      "feature": "previous_gpa",
+      "label": "Previous Semester GPA",
+      "importance": 0.0031,
+      "importance_pct": 0.31
+    }
+  ],
+  "residual_std": 3.316,
+  "trained_at": "2026-10-19T23:23:19.819101"
+}
